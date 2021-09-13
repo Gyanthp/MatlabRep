@@ -5,16 +5,21 @@
 clc
 close all
 clear
-
+%% create the data vector
 x=linspace(0,10);
 fx=2*cos(x*0.8)+4;
 gx=0.3*(x-6).^2;
+
+%% plot the points
 plot(x,fx,x,gx);
 legend('fx','gx');
 ind=find(abs(fx-gx)<0.1);
 lim=[33 97];
 p=(fx(33:97)-gx(33:97))+gx(33:97);
-hold on;
+hold on;  % holds the previous plot
+
+%% next plot
+
 plot(x(lim(1)),fx(lim(1)),'*',x(lim(2)),fx(lim(2)),'*');
 hold on;
 bar(x(33:97),p);
