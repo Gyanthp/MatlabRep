@@ -30,7 +30,7 @@ v(ind) = 0;
 subplot(2,1,1),plot(t,z), title("t vs distance");
 subplot(2,1,2),plot(t,v), title("t vs velocity");
 
-
+%% Function definition for dgls
 function dydt = dgl(~,y)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
